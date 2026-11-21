@@ -1,0 +1,1 @@
+{"name":"campus-t-demo","private":true,"version":"0.2.0","scripts":{"dev":"node server.mjs","check":"node --check dist/app.js && node --check dist/community.js && node --check server.mjs"}}
