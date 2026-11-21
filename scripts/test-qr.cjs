@@ -1,0 +1,2 @@
+const fs=require('fs'),assert=require('assert/strict'),jsQR=require('jsqr'),{PNG}=require('pngjs');
+for(const action of ['checkin','checkout']){const png=PNG.sync.read(fs.readFileSync(`dist/assets/photo-${action}.png`));const code=jsQR(new Uint8ClampedArray(png.data),png.width,png.height);assert.equal(code.data,`https://campus-t-kolin-demo.lacyalbatross5.chatgpt.site/#attend/photo-walk/${action}`);console.log('PASS QR decoding: '+action);}

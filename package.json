@@ -1,1 +1,14 @@
-{"name":"campus-t-demo","private":true,"version":"0.2.0","scripts":{"dev":"node server.mjs","check":"node --check dist/app.js && node --check dist/community.js && node --check server.mjs"}}
+{
+  "name": "campus-t-demo",
+  "private": true,
+  "version": "0.3.0",
+  "scripts": {
+    "dev": "node server.mjs",
+    "check": "node --check dist/app.js && node --check dist/community.js && node --check dist/onsite.js && node --check server.mjs && node scripts/test-qr.cjs",
+    "generate:qr": "node scripts/generate-qr.mjs"
+  },
+  "devDependencies": {
+    "jsqr": "1.4.0",
+    "qrcode": "1.5.4"
+  }
+}
