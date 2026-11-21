@@ -1,10 +1,10 @@
 {
   "name": "campus-t-demo",
   "private": true,
-  "version": "0.4.0",
+  "version": "0.4.1",
   "scripts": {
     "dev": "node server.mjs",
-    "check": "node --check dist/app.js && node --check dist/community.js && node --check dist/onsite.js && node --check dist/monad.js && node --check server.mjs && node scripts/test-qr.cjs",
+    "check": "node --check dist/app.js && node --check dist/community.js && node --check dist/onsite.js && node --check dist/monad.js && node --check dist/wardrobe.js && node --check server.mjs && node scripts/test-qr.cjs",
     "generate:qr": "node scripts/generate-qr.mjs",
     "build:chain": "node scripts/build-chain.mjs",
     "test:contract": "node scripts/test-chain.mjs"
