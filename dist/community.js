@@ -16,7 +16,7 @@ function grantEventPoints(event){const id='activity-'+event.id;if(!social.ledger
 allEvents().filter(e=>state.progress[e.id]==='claimed').forEach(grantEventPoints);
 save();
 let communityTab='feed',circleFilter='',shopFilter='全部奖励',mineTab='overview',selectedProduct=null;
-const currentProfile=()=>({name:'校园探索家',initial:'K',school:social.showSchool?'浙江大学':'校园未公开',bio:'把生活过成喜欢的样子，和同频的人一起创造。',interests:social.interests,color:'lilac',frame:social.equipped});
+const currentProfile=()=>({name:'校园探索家',initial:'K',school:social.showSchool?'浙江大学':'校园未公开',bio:'把生活过成喜欢的样子，和同频的人一起创造。',interests:social.interests,color:'lilac',frame:window.campusNFT?.frame()||social.equipped});
 const person=id=>id==='me'?currentProfile():people[id];
 const tags=items=>`<div class="tags">${items.map(t=>`<span>${escapeHTML(t)}</span>`).join('')}</div>`;
 const avatar=(id,large=false)=>{const p=person(id);return `<span class="social-avatar ${p.color} ${p.frame?'frame-'+p.frame:''} ${large?'large':''}">${p.initial}</span>`;};
